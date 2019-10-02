@@ -1,0 +1,296 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background: black; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Quicksand, sans-serif;
+  box-sizing: border-box; }
+
+.white-text {
+  color: white;
+  margin-right: 18px; }
+
+.white-text-bold {
+  color: white;
+  font-weight: bold;
+  margin-right: 18px; }
+
+.animate {
+  position: relative; }
+
+.animate-left {
+  opacity: 0;
+  left: -500px;
+  transition: left 1000ms, opacity 1000ms, transform 700ms; }
+
+.animate-right {
+  opacity: 0;
+  right: -500px;
+  transition: right 1000ms, opacity 1000ms, transform 700ms; }
+
+.animate-left.animate-start {
+  opacity: 1;
+  left: 0; }
+
+.animate-right.animate-start {
+  opacity: 1;
+  right: 0; }
+
+.header-nav {
+  background: rgba(10, 9, 9, 0.6);
+  font-size: 24px;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  color: white; }
+
+.menu-nav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 5%;
+  margin-bottom: 0; }
+
+.menu-nav li {
+  padding: 0 20px; }
+
+.menu-nav a {
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(white, white);
+  background-size: 0 1px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .2s ease-out; }
+
+.menu-nav a:hover {
+  background-size: 100% 1px, auto; }
+
+@media (max-width: 1000px) {
+  .menu-nav {
+    justify-content: center;
+    font-size: 24px;
+    padding: 20px 10%; } }
+.jumbotron {
+  height: 100vh;
+  padding: 100px;
+  margin-bottom: 0;
+  background-image: url("../images/cordobamain.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(100% 0, 100% 100%, 0 90%, 0 0); }
+  .jumbotron .jumbotron-container {
+    width: 500px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px; }
+  .jumbotron .jumbotron-car {
+    animation-name: car;
+    animation-duration: 6s;
+    padding: 15px 0 15px 10px;
+    font-size: 60px; }
+
+@keyframes car {
+  0% {
+    padding-left: 10px; }
+  25% {
+    padding-left: 200px; }
+  50% {
+    transform: scaleX(-1); }
+  75% {
+    padding: 10px; }
+  100% {
+    transform: scaleX(1); } }
+.jumbotron-header {
+  font-size: 3em;
+  text-align: center; }
+
+.jumbotron-line {
+  padding: 1px;
+  margin: 2px 5%;
+  background: white; }
+
+@media (max-width: 1000px) {
+  .jumbotron {
+    flex-flow: column;
+    align-content: space-around;
+    justify-content: center;
+    padding: 50px 25px; }
+    .jumbotron .jumbotron-container {
+      width: auto; } }
+.timeline {
+  margin: 0 auto;
+  padding: 60px 0;
+  max-width: 900px;
+  color: lightgrey;
+  letter-spacing: 1px;
+  overflow: hidden; }
+  .timeline .timeline-body {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0 8px 8px 0;
+    margin-left: 200px;
+    padding: 5px 0; }
+    .timeline .timeline-body:after {
+      content: "";
+      position: absolute;
+      background: #44aaee;
+      width: 4px;
+      height: 100%;
+      left: -4px;
+      top: 0; }
+    .timeline .timeline-body .timeline-item {
+      position: relative; }
+      .timeline .timeline-body .timeline-item:after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 4px solid #44aaee;
+        background-color: black;
+        position: absolute;
+        left: -18px;
+        top: 0;
+        z-index: 9; }
+      .timeline .timeline-body .timeline-item .date {
+        position: absolute;
+        left: -190px;
+        top: 4px;
+        font-size: 18px;
+        opacity: .5; }
+      .timeline .timeline-body .timeline-item .timeline-content {
+        margin: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px dashed gainsboro; }
+
+/*.properties {
+  background-color: black;
+  //height: 75vh;
+  width: 100vw;
+  color: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  .properties-header {
+    padding: 0 0 100px 0;
+    text-align: center;
+    font-size: 48px;
+  }
+  .properties-container {
+    width: 100%;
+    display: flex;
+    .properties-image {
+      background: gainsboro;
+      height: auto;
+      //width: 60%;
+     // display: flex;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .properties-info {
+      width: 40%;
+    }
+    .properties-inner {
+      width: 300px;
+    }
+    .properties-list {
+      list-style-type: none;
+      font-size: 24px;
+
+    }
+  }
+
+}
+
+*/
+.description {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 30px 0;
+  padding: 100px 0 40px 0;
+  display: flex;
+  justify-content: space-evenly;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 10%);
+  overflow: hidden; }
+  .description .description-car {
+    align-items: center;
+    align-self: center;
+    font-size: 80px;
+    padding: 20px; }
+  .description .description-car:last-of-type {
+    transform: scaleX(-1); }
+  .description .description-main {
+    letter-spacing: 1px;
+    font-size: 24px;
+    max-width: 900px;
+    padding: 10px;
+    text-align: left; }
+
+@media (max-width: 1000px) {
+  .description {
+    padding: 150px 30px 100px 30px; }
+
+  .description-car {
+    display: none; }
+
+  .description-main {
+    text-align: center;
+    padding: 15px; } }
+.gallery {
+  margin: .5vw;
+  padding: 30px 0;
+  font-size: 0;
+  flex-flow: row wrap;
+  display: flex; }
+  .gallery .pictures {
+    display: flex;
+    flex-flow: row wrap;
+    margin: .5vw;
+    width: 100%; }
+  .gallery div {
+    flex: auto;
+    width: 250px;
+    margin: .5vw;
+    transition: .5s; }
+    .gallery div :hover {
+      transform: scale(1.02); }
+    .gallery div img {
+      width: 100%;
+      height: auto; }
+
+@media screen and (max-width: 1000px) {
+  .gallery {
+    padding: 50px 0; } }
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 70px;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  clip-path: polygon(100% 10%, 100% 100%, 0 100%, 0 0); }
+  .footer h1 {
+    font-size: 60px;
+    padding: 30px 0; }
+  .footer ul {
+    display: flex;
+    list-style-type: none; }
+    .footer ul li {
+      color: lightgrey;
+      font-size: 30px;
+      padding: 10px 40px; }
+
+@media screen and (max-width: 1000px) {
+  .footer ul {
+    flex-flow: column; } }
+
+/*# sourceMappingURL=styles.css.map */

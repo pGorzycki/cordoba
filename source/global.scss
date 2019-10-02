@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Quicksand, sans-serif;
+  box-sizing: border-box;
+}
+
+.white-text {
+  color: white;
+  margin-right: 18px;
+}
+.white-text-bold {
+  color: white;
+  font-weight: bold;
+  margin-right: 18px;
+}
+
+.animate {
+  position: relative;
+
+}
+
+.animate-left {
+  opacity: 0;
+  left: -500px;
+  transition: left 1000ms, opacity 1000ms, transform 700ms;
+}
+.animate-right {
+  opacity: 0;
+  right: -500px;
+  transition: right 1000ms, opacity 1000ms, transform 700ms;
+}
+.animate-left.animate-start{
+  opacity: 1;
+  left: 0;
+}
+.animate-right.animate-start{
+  opacity: 1;
+  right: 0;
+}

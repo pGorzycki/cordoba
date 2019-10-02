@@ -1,0 +1,53 @@
+.jumbotron {
+  height: 100vh;
+  padding: 100px;
+  margin-bottom: 0;
+  background-image: url("../images/cordobamain.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(100% 0, 100% 100%, 0 90%, 0 0);
+  .jumbotron-container {
+    width: 500px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+  }
+  .jumbotron-car {
+    animation-name: car;
+    animation-duration: 6s;
+    padding: 15px 0 15px 10px;
+    font-size: 60px;
+  }
+}
+
+@keyframes car {
+  0%  {padding-left: 10px}
+  25% {padding-left: 200px }
+  50% {transform: scaleX(-1)}
+  75% {padding: 10px}
+  100% {transform: scaleX(1)}
+}
+.jumbotron-header {
+  font-size: 3em;
+  text-align: center;
+
+}
+.jumbotron-line {
+  padding: 1px;
+  margin: 2px 5%;
+  background: white;
+}
+
+@media (max-width: 1000px){
+  .jumbotron {
+    flex-flow: column;
+    align-content: space-around;
+    justify-content: center;
+    padding: 50px 25px;
+    .jumbotron-container {
+      width: auto;
+    }
+  }
+
+}
