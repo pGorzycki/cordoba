@@ -22,7 +22,6 @@ body {
 .white-text-bold {
   color: white;
   font-weight: bold;
-  margin-right: 18px;
 }
 
 .animate {
@@ -292,6 +291,44 @@ body {
     padding: 15px;
   }
 }
+.counter {
+  width: 100%;
+}
+
+.counter-main {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 20px;
+  text-align: center;
+}
+.counter-main .counter-item {
+  display: flex;
+  flex-direction: column;
+}
+.counter-main .counter-item .counter-text {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.5em;
+}
+.counter-main .counter-item .counter-box {
+  align-self: center;
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 20px;
+  padding: 10px;
+  height: 110px;
+  width: 110px;
+  border: 2px #44aaee dashed;
+  transform: rotate(45deg);
+}
+.counter-main .counter-item .counter-box i {
+  transform: rotate(-45deg);
+  padding-top: 15px;
+  font-size: 3.5em;
+}
+
 .gallery {
   margin: 0.5vw;
   padding: 30px 0;

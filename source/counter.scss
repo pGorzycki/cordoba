@@ -1,0 +1,37 @@
+
+.counter {
+  width: 100%;
+}
+.counter-main {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 20px;
+  text-align: center;
+  .counter-item {
+    display: flex;
+    flex-direction: column;
+    .counter-text {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.5em ;
+    }
+    .counter-box {
+      align-self: center;
+      border-radius: 15%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: 20px;
+      padding: 10px;
+      height: 110px;
+      width: 110px;
+      border: 2px #44aaee dashed;
+      transform: rotate(45deg);
+      i {
+        transform: rotate(-45deg);
+        padding-top: 15px;
+        font-size: 3.5em;
+      }
+    }
+  }
+}
