@@ -163,7 +163,7 @@ body {
 }
 .timeline {
   width: 100%;
-  background: url("../images/counterphoto.jpeg");
+  background: url("./images/counterphoto.jpeg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -362,7 +362,7 @@ body {
   justify-content: center;
   padding: 70px;
   margin-top: 30px;
-  background: url("../images/footerphoto.jpeg");
+  background: url("./images/footerphoto.jpeg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
