@@ -12,8 +12,7 @@ body {
   box-sizing: border-box; }
 
 .white-text {
-  color: white;
-  margin-right: 18px; }
+  color: white; }
 
 .white-text-bold {
   color: white;
@@ -74,8 +73,11 @@ body {
 @media (max-width: 1000px) {
   .menu-nav {
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px;
     padding: 20px 10%; } }
+@media (max-width: 500px) {
+  .menu-nav {
+    font-size: 15px; } }
 .jumbotron {
   height: 100vh;
   padding: 100px;
@@ -121,23 +123,34 @@ body {
     flex-flow: column;
     align-content: space-around;
     justify-content: center;
-    padding: 50px 25px; }
+    padding: 50px 25px;
+    height: 100vh;
+    background-attachment: initial; }
     .jumbotron .jumbotron-container {
       width: auto; } }
 .timeline {
+  width: 100%;
+  background: url("../images/counterphoto.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-shadow: black 1px 1px; }
+
+.timeline-inner {
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 100px 0;
   max-width: 900px;
   color: lightgrey;
   letter-spacing: 1px;
   overflow: hidden; }
-  .timeline .timeline-body {
+  .timeline-inner .timeline-body {
+    margin: 0 auto;
     position: relative;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 0 8px 8px 0;
     margin-left: 200px;
     padding: 5px 0; }
-    .timeline .timeline-body:after {
+    .timeline-inner .timeline-body:after {
       content: "";
       position: absolute;
       background: #44aaee;
@@ -145,9 +158,9 @@ body {
       height: 100%;
       left: -4px;
       top: 0; }
-    .timeline .timeline-body .timeline-item {
+    .timeline-inner .timeline-body .timeline-item {
       position: relative; }
-      .timeline .timeline-body .timeline-item:after {
+      .timeline-inner .timeline-body .timeline-item:after {
         content: "";
         width: 30px;
         height: 30px;
@@ -158,64 +171,35 @@ body {
         left: -18px;
         top: 0;
         z-index: 9; }
-      .timeline .timeline-body .timeline-item .date {
+      .timeline-inner .timeline-body .timeline-item .date {
         position: absolute;
         left: -190px;
+        padding: 10px;
         top: 4px;
-        font-size: 18px;
-        opacity: .5; }
-      .timeline .timeline-body .timeline-item .timeline-content {
+        color: white;
+        font-size: 18px; }
+      .timeline-inner .timeline-body .timeline-item .timeline-content {
         margin: 40px;
         padding-bottom: 40px;
         border-bottom: 1px dashed gainsboro; }
 
-/*.properties {
-  background-color: black;
-  //height: 75vh;
-  width: 100vw;
-  color: lightgrey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 40px;
-  .properties-header {
-    padding: 0 0 100px 0;
-    text-align: center;
-    font-size: 48px;
-  }
-  .properties-container {
-    width: 100%;
-    display: flex;
-    .properties-image {
-      background: gainsboro;
-      height: auto;
-      //width: 60%;
-     // display: flex;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-    .properties-info {
-      width: 40%;
-    }
-    .properties-inner {
-      width: 300px;
-    }
-    .properties-list {
-      list-style-type: none;
-      font-size: 24px;
+@media (max-width: 600px) {
+  .timeline-inner {
+    margin: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-end !important; }
 
-    }
-  }
+  .timeline-body {
+    width: 90% !important;
+    margin: 0 !important; }
 
-}
-
-*/
+  .date {
+    left: 0;
+    position: initial !important; } }
 .description {
   background-color: rgba(255, 255, 255, 0.1);
-  margin: 30px 0;
+  margin: 30px 0 0 0;
   padding: 100px 0 40px 0;
   display: flex;
   justify-content: space-evenly;
@@ -246,16 +230,21 @@ body {
     text-align: center;
     padding: 15px; } }
 .counter {
-  width: 100%; }
+  width: 100%;
+  overflow: hidden;
+  padding-top: 60px; }
 
 .counter-main {
   display: flex;
   justify-content: space-evenly;
   padding: 40px 20px;
-  text-align: center; }
+  text-align: center;
+  flex-wrap: wrap; }
   .counter-main .counter-item {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 40px; }
     .counter-main .counter-item .counter-text {
       text-align: center;
       padding: 20px 0;
@@ -307,7 +296,10 @@ body {
   justify-content: center;
   padding: 70px;
   margin-top: 30px;
-  background: rgba(255, 255, 255, 0.1);
+  background: url("../images/footerphoto.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   clip-path: polygon(100% 10%, 100% 100%, 0 100%, 0 0); }
   .footer h1 {
     font-size: 60px;
@@ -322,6 +314,7 @@ body {
 
 @media screen and (max-width: 1000px) {
   .footer ul {
-    flex-flow: column; } }
+    flex-flow: column;
+    color: white; } }
 
 /*# sourceMappingURL=styles.css.map */

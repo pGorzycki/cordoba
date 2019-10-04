@@ -35,8 +35,14 @@
 @media (max-width: 1000px){
   .menu-nav {
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px;
     padding: 20px 10%;
+  }
+
+}
+@media (max-width: 500px){
+  .menu-nav {
+    font-size: 15px;
   }
 
 }

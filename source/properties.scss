@@ -1,14 +1,25 @@
+
 .timeline {
+  width: 100%;
+  background: url("../images/counterphoto.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-shadow: black 1px 1px;
+}
+
+.timeline-inner {
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 100px 0;
   max-width: 900px;
   color: lightgrey;
   letter-spacing: 1px;
   overflow: hidden;
 
   .timeline-body {
+    margin: 0 auto;
     position: relative;
-    background: rgba(white, 0.1);
+    background: rgba(black, 0.7);
     border-radius: 0 8px 8px 0;
     margin-left: 200px;
     padding: 5px 0;
@@ -41,9 +52,10 @@
       .date {
         position: absolute;
         left: -190px;
+        padding: 10px;
         top: 4px;
+        color: white;
         font-size: 18px;
-        opacity: .5;
       }
       .timeline-content {
         margin: 40px;
@@ -54,64 +66,26 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.properties {
-  background-color: black;
-  //height: 75vh;
-  width: 100vw;
-  color: lightgrey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 40px;
-  .properties-header {
-    padding: 0 0 100px 0;
-    text-align: center;
-    font-size: 48px;
+@media (max-width: 600px){
+  .timeline-inner {
+    margin: 0!important;
+    width: 100%!important;
+    display: flex!important;
+    justify-content: flex-end!important;
   }
-  .properties-container {
-    width: 100%;
-    display: flex;
-    .properties-image {
-      background: gainsboro;
-      height: auto;
-      //width: 60%;
-     // display: flex;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-    .properties-info {
-      width: 40%;
-    }
-    .properties-inner {
-      width: 300px;
-    }
-    .properties-list {
-      list-style-type: none;
-      font-size: 24px;
-
-    }
+  .timeline-body {
+    width: 90%!important;
+    margin: 0!important;
+  }
+  .date {
+    left: 0;
+    position: initial!important;
   }
 
 }
 
-*/
+
+
+
+
+
